@@ -76,10 +76,14 @@ h6 {
 /*--------------------*/
 
 // START
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   max-width: 1440px;
   margin: auto;
+  background-color: #f3f3f3;
 
   font-family: 'Raleway', 'Inter';
   font-size: 1rem;
@@ -94,9 +98,11 @@ body {
   display: flex;
   justify-content: flex-end;
 
+  padding-top: 70px;
+  margin-bottom: 150px;
+
   &__link {
-    padding: 30px;
-    margin-bottom: 250px;
+    margin-left: 30px;
     font-style: normal;
     font-weight: 500;
     font-size: 21px;
@@ -104,6 +110,27 @@ body {
     letter-spacing: -0.03em;
 
     color: black;
+
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2.5px;
+      border-radius: 4px;
+      background-color: #18272f;
+      bottom: -5px;
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover::before {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
   }
 }
 
@@ -133,6 +160,13 @@ body {
     transform: rotate(135deg);
     position: relative;
     left: 11px;
+
+    &:hover {
+      border-top: 5px solid rgb(105, 105, 105);
+      border-right: 5px solid rgb(105, 105, 105);
+
+      transition: border-top 0.2s linear, border-right 0.2s linear;
+    }
   }
 }
 
@@ -182,13 +216,17 @@ body {
   width: 1120px;
   height: 2px;
   margin-top: 106px;
-  background-color: black;
+  background-color: #181717;
 }
 
 .footer {
-  margin: 0 160px;
-  display: flex;
-  justify-content: space-between;
+  margin: 167px 160px;
+
+  &__container {
+    padding-bottom: 70px;
+    display: flex;
+    justify-content: space-between;
+  }
 
   &__name {
     font-weight: 500;
@@ -205,5 +243,26 @@ body {
     line-height: 120%;
     letter-spacing: -0.03em;
     color: black;
+
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2.5px;
+      border-radius: 4px;
+      background-color: #18272f;
+      bottom: -5px;
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover::before {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
   }
 }

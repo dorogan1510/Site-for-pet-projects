@@ -1,0 +1,278 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+body {
+  max-width: 1440px;
+  margin: auto;
+  background-color: #f3f3f3;
+  font-family: "Raleway", "Inter";
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.header {
+  margin: 0 160px;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 70px;
+  margin-bottom: 150px;
+}
+.nav__link {
+  margin-left: 30px;
+  color: black;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  position: relative;
+}
+.nav__link:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.5px;
+  border-radius: 4px;
+  background-color: #18272f;
+  bottom: -5px;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+.nav__link:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.container1 {
+  margin: 0 160px;
+  display: flex;
+  justify-content: space-between;
+}
+.container1 h1 {
+  width: 544px;
+  height: 129px;
+  margin-bottom: 32px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 97.2%;
+  letter-spacing: -0.03em;
+}
+.container1 p {
+  width: 575px;
+  height: 359px;
+  margin-bottom: 136px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 117%;
+  letter-spacing: -0.03em;
+}
+
+.container2 {
+  margin: 60px 160px 0;
+}
+.container2__parts {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 72px;
+}
+.container2__parts__flex1 {
+  width: 124px;
+  height: 51px;
+  margin-right: 60px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 121.5%;
+  text-decoration: underline;
+}
+.container2__parts__flex2 {
+  width: 401px;
+  height: 44px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 121.5%;
+}
+
+.prefooter {
+  width: 1120px;
+  height: 166px;
+  margin: 0 160px 210px;
+}
+.prefooter__flex {
+  display: flex;
+  justify-content: space-between;
+}
+.prefooter__text {
+  width: 347px;
+  height: 71px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 117%;
+  letter-spacing: -0.03em;
+}
+.prefooter__resume {
+  display: block;
+  margin-top: 30px;
+  color: black;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 121.5%;
+  letter-spacing: -0.03em;
+}
+.prefooter__email {
+  width: 338px;
+  height: 37px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 117%;
+  letter-spacing: -0.03em;
+}
+.prefooter__line {
+  width: 1120px;
+  height: 2px;
+  margin-bottom: 71px;
+  background-color: #181717;
+}
+
+.footer {
+  margin: 167px 160px;
+}
+.footer__container {
+  padding-bottom: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__name {
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+}
+.footer a {
+  margin-left: 37px;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  color: black;
+  position: relative;
+}
+.footer a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.5px;
+  border-radius: 4px;
+  background-color: #18272f;
+  bottom: -5px;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+.footer a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
