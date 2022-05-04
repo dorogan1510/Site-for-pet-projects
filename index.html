@@ -5,66 +5,93 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Raleway:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
 
   <body>
-    <header>
+    <header class="header">
       <nav class="nav">
         <a class="nav__link" href="#">Projects</a>
         <a class="nav__link" href="#">About</a>
       </nav>
     </header>
-    <main>
+
+    <main class="main">
       <h1>I’m glad to present you my pet projects</h1>
+      <a class="main__arrow" href="#id1"></a>
 
-      <section>
-        <h2>01 / Project name</h2>
-        <p>Description</p>
-        <a href="#">Link</a>
-        <img
-          src="./resources/img/light.png"
-          alt="thumbnail"
-          width="640"
-          height="365"
-        />
-      </section>
-
-      <section>
-        <h2>02 / Project name</h2>
-        <p>Description</p>
-        <a href="#">Link</a>
-        <img
-          src="./resources/img/light.png"
-          alt="thumbnail"
-          width="640"
-          height="365"
-        />
-      </section>
-
-      <section>
-        <h2>03 / Project name</h2>
-        <p>Description</p>
-        <a href="#">Link</a>
-        <img
-          src="./resources/img/light.png"
-          alt="thumbnail"
-          width="640"
-          height="365"
-        />
-      </section>
-
-      <footer>
-        <div>Danila Frolov — 2022</div>
-        <div>
-          <a href="#">Github</a>
-          <a href="#">WhatsApp</a>
-          <a href="#">Telegram</a>
-          <a href="#">LinkedIn</a>
-          <a href="#">Skype</a>
+      <section class="section">
+        <div class="section__flex" id="id1">
+          <div>
+            <h2>01 / Project name</h2>
+            <p>Description</p>
+            <a href="#">Link</a>
+          </div>
+          <div>
+            <img
+              src="./resources/img/light.png"
+              alt="thumbnail"
+              width="640"
+              height="365"
+            />
+          </div>
         </div>
-      </footer>
+        <div class="line"></div>
+      </section>
+
+      <section class="section">
+        <div class="section__flex">
+          <div>
+            <h2>02 / Project name</h2>
+            <p>Description</p>
+            <a href="#">Link</a>
+          </div>
+          <div>
+            <img
+              src="./resources/img/light.png"
+              alt="thumbnail"
+              width="640"
+              height="365"
+            />
+          </div>
+        </div>
+        <div class="line"></div>
+      </section>
+
+      <section class="section">
+        <div class="section__flex">
+          <div>
+            <h2>03 / Project name</h2>
+            <p>Description</p>
+            <a href="#">Link</a>
+          </div>
+          <div>
+            <img
+              src="./resources/img/light.png"
+              alt="thumbnail"
+              width="640"
+              height="365"
+            />
+          </div>
+        </div>
+        <div class="line"></div>
+      </section>
     </main>
+
+    <footer class="footer">
+      <div class="footer__name">Danila Frolov — 2022</div>
+      <div>
+        <a href="#">Github</a>
+        <a href="#">WhatsApp</a>
+        <a href="#">Telegram</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Skype</a>
+      </div>
+    </footer>
   </body>
   <script src="./js/app.js"></script>
 </html>
