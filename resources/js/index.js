@@ -5,10 +5,10 @@ let indexSwitcher = document.getElementById('index-switcher')
 indexSwitcher.onclick = () => {
   let theme = document.getElementById('index')
 
-  if (theme.getAttribute('href') == './css/index.css') {
-    theme.href = './css/index-dark.css'
+  if (theme.getAttribute('href') == './css/theme-light.css') {
+    theme.href = './css/theme-dark.css'
   } else {
-    theme.href = './css/index.css'
+    theme.href = './css/theme-light.css'
   }
 }
 
@@ -27,9 +27,11 @@ let activeTheme = localStorage.getItem('theme')
 let switcherPosition = localStorage.getItem('switcher')
 
 if (activeTheme === null) {
-  document.getElementById('index').href = './css/index.css'
+  document.getElementById('index').href = './css/theme-light.css'
   indexSwitcher.className.value = 'switch-btn'
 } else {
   document.getElementById('index').href = activeTheme
   indexSwitcher.className.value = switcherPosition
 }
+
+localStorage.removeItem('theme')

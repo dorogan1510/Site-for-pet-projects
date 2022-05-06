@@ -3,10 +3,10 @@ let aboutSwitcher = document.getElementById('about-switcher')
 aboutSwitcher.onclick = () => {
   let theme = document.getElementById('about')
 
-  if (theme.getAttribute('href') == './css/about.css') {
-    theme.href = './css/about-dark.css'
+  if (theme.getAttribute('href') == './css/theme-light.css') {
+    theme.href = './css/theme-dark.css'
   } else {
-    theme.href = './css/about.css'
+    theme.href = './css/theme-light.css'
   }
 }
 

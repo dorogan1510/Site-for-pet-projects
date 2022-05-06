@@ -7,3 +7,5 @@ mix
   .sass('resources/scss/about.scss', 'css')
   .sass('resources/scss/index-dark.scss', 'css')
   .sass('resources/scss/about-dark.scss', 'css')
+  .sass('resources/scss/theme-light.scss', 'css')
+  .sass('resources/scss/theme-dark.scss', 'css')

@@ -1,6 +1,6 @@
-$bg: #f3f3f3;
-$h1: #181717;
-$h2: #606060;
+$bg: #2a2a2a;
+$h1: #e7e7e7;
+$h2: #e2e2e2;
 
 body {
   background-color: $bg;
@@ -8,15 +8,17 @@ body {
 
 .nav {
   &__link {
-    color: $h1;
+    color: $h2;
 
     &:before {
-      background-color: #18272f;
+      background-color: $h1;
     }
   }
 }
 
 .main {
+  color: $h1;
+
   &__arrow {
     border-top: 5px solid $h1;
     border-right: 5px solid $h1;
@@ -32,32 +34,33 @@ body {
   a {
     color: $h1;
   }
-}
 
-.line {
-  background-color: $h1;
+  .line {
+    background-color: $h1;
+  }
 }
 
 .footer {
+  color: $h2;
+
   a {
-    color: $h1;
+    color: $h2;
 
     &:before {
-      background-color: #18272f;
+      background-color: $h2;
     }
   }
 }
 
 // SWITCH-BTN
-
 .switch-btn {
   background: $h2;
-
-  &::after {
-    background: $bg;
-  }
 }
 
-.switch-on {
-  background: $h1;
+.switch-btn::after {
+  background: $bg;
+
+  .switch-on {
+    background: $h1;
+  }
 }

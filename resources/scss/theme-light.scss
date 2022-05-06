@@ -1,0 +1,64 @@
+// Index.html
+$bg: #f3f3f3;
+$h1: #181717;
+$h2: #606060;
+
+body {
+  background-color: $bg;
+}
+
+.nav {
+  &__link {
+    color: $h1;
+
+    &:before {
+      background-color: #18272f;
+    }
+  }
+}
+
+.main {
+  &__arrow {
+    border-top: 5px solid $h1;
+    border-right: 5px solid $h1;
+
+    &:hover {
+      border-top: 5px solid rgb(105, 105, 105);
+      border-right: 5px solid rgb(105, 105, 105);
+    }
+  }
+}
+
+.section {
+  a {
+    color: $h1;
+  }
+}
+
+.line {
+  background-color: $h1;
+}
+
+.footer {
+  a {
+    color: $h1;
+
+    &:before {
+      background-color: #18272f;
+    }
+  }
+}
+
+// SWITCH-BTN
+
+.switch-btn {
+  background: $h2;
+
+  &::after {
+    background: $bg;
+  }
+}
+
+.switch-on {
+  background: $h1;
+}

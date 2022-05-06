@@ -13,10 +13,10 @@ var indexSwitcher = document.getElementById('index-switcher');
 indexSwitcher.onclick = function () {
   var theme = document.getElementById('index');
 
-  if (theme.getAttribute('href') == './css/index.css') {
-    theme.href = './css/index-dark.css';
+  if (theme.getAttribute('href') == './css/theme-light.css') {
+    theme.href = './css/theme-dark.css';
   } else {
-    theme.href = './css/index.css';
+    theme.href = './css/theme-light.css';
   }
 }; // Change switcher position
 
@@ -31,12 +31,27 @@ var activeTheme = localStorage.getItem('theme');
 var switcherPosition = localStorage.getItem('switcher');
 
 if (activeTheme === null) {
-  document.getElementById('index').href = './css/index.css';
+  document.getElementById('index').href = './css/theme-light.css';
   indexSwitcher.className.value = 'switch-btn';
 } else {
   document.getElementById('index').href = activeTheme;
   indexSwitcher.className.value = switcherPosition;
 }
+
+localStorage.removeItem('theme');
+
+/***/ }),
+
+/***/ "./resources/scss/theme-dark.scss":
+/*!****************************************!*\
+  !*** ./resources/scss/theme-dark.scss ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ }),
 
@@ -83,6 +98,19 @@ __webpack_require__.r(__webpack_exports__);
 /*!****************************************!*\
   !*** ./resources/scss/about-dark.scss ***!
   \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/scss/theme-light.scss":
+/*!*****************************************!*\
+  !*** ./resources/scss/theme-light.scss ***!
+  \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -179,10 +207,12 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/index": 0,
+/******/ 			"css/theme-light": 0,
 /******/ 			"css/about-dark": 0,
 /******/ 			"css/index-dark": 0,
 /******/ 			"css/about": 0,
-/******/ 			"css/index": 0
+/******/ 			"css/index": 0,
+/******/ 			"css/theme-dark": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -232,11 +262,13 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/about-dark","css/index-dark","css/about","css/index"], () => (__webpack_require__("./resources/js/index.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/about-dark","css/index-dark","css/about","css/index"], () => (__webpack_require__("./resources/scss/index.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/about-dark","css/index-dark","css/about","css/index"], () => (__webpack_require__("./resources/scss/about.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/about-dark","css/index-dark","css/about","css/index"], () => (__webpack_require__("./resources/scss/index-dark.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/about-dark","css/index-dark","css/about","css/index"], () => (__webpack_require__("./resources/scss/about-dark.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/theme-light","css/about-dark","css/index-dark","css/about","css/index","css/theme-dark"], () => (__webpack_require__("./resources/js/index.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/theme-light","css/about-dark","css/index-dark","css/about","css/index","css/theme-dark"], () => (__webpack_require__("./resources/scss/index.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/theme-light","css/about-dark","css/index-dark","css/about","css/index","css/theme-dark"], () => (__webpack_require__("./resources/scss/about.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/theme-light","css/about-dark","css/index-dark","css/about","css/index","css/theme-dark"], () => (__webpack_require__("./resources/scss/index-dark.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/theme-light","css/about-dark","css/index-dark","css/about","css/index","css/theme-dark"], () => (__webpack_require__("./resources/scss/about-dark.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/theme-light","css/about-dark","css/index-dark","css/about","css/index","css/theme-dark"], () => (__webpack_require__("./resources/scss/theme-light.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/theme-light","css/about-dark","css/index-dark","css/about","css/index","css/theme-dark"], () => (__webpack_require__("./resources/scss/theme-dark.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

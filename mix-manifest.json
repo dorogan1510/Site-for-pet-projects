@@ -1,8 +1,10 @@
 {
     "/js/index.js": "/js/index.js",
     "/js/about.js": "/js/about.js",
+    "/css/theme-light.css": "/css/theme-light.css",
     "/css/about-dark.css": "/css/about-dark.css",
     "/css/index-dark.css": "/css/index-dark.css",
     "/css/about.css": "/css/about.css",
-    "/css/index.css": "/css/index.css"
+    "/css/index.css": "/css/index.css",
+    "/css/theme-dark.css": "/css/theme-dark.css"
 }

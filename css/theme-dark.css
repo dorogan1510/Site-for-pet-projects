@@ -1,0 +1,50 @@
+body {
+  background-color: #2a2a2a;
+}
+
+.nav__link {
+  color: #e2e2e2;
+}
+.nav__link:before {
+  background-color: #e7e7e7;
+}
+
+.main {
+  color: #e7e7e7;
+}
+.main__arrow {
+  border-top: 5px solid #e7e7e7;
+  border-right: 5px solid #e7e7e7;
+}
+.main__arrow:hover {
+  border-top: 5px solid rgb(105, 105, 105);
+  border-right: 5px solid rgb(105, 105, 105);
+}
+
+.section a {
+  color: #e7e7e7;
+}
+.section .line {
+  background-color: #e7e7e7;
+}
+
+.footer {
+  color: #e2e2e2;
+}
+.footer a {
+  color: #e2e2e2;
+}
+.footer a:before {
+  background-color: #e2e2e2;
+}
+
+.switch-btn {
+  background: #e2e2e2;
+}
+
+.switch-btn::after {
+  background: #2a2a2a;
+}
+.switch-btn::after .switch-on {
+  background: #e7e7e7;
+}
