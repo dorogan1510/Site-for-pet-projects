@@ -1,5 +1,8 @@
 {
-    "/js/app.js": "/js/app.js",
+    "/js/index.js": "/js/index.js",
+    "/js/about.js": "/js/about.js",
+    "/css/about-dark.css": "/css/about-dark.css",
+    "/css/index-dark.css": "/css/index-dark.css",
     "/css/about.css": "/css/about.css",
     "/css/index.css": "/css/index.css"
 }

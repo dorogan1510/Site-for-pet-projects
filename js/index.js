@@ -1,6 +1,44 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
+
+/***/ "./resources/js/index.js":
+/*!*******************************!*\
+  !*** ./resources/js/index.js ***!
+  \*******************************/
+/***/ (() => {
+
+// Change theme
+var indexSwitcher = document.getElementById('index-switcher');
+
+indexSwitcher.onclick = function () {
+  var theme = document.getElementById('index');
+
+  if (theme.getAttribute('href') == './css/index.css') {
+    theme.href = './css/index-dark.css';
+  } else {
+    theme.href = './css/index.css';
+  }
+}; // Change switcher position
+
+
+indexSwitcher.addEventListener('click', function () {
+  indexSwitcher.classList.toggle('switch-on');
+  localStorage.setItem('theme', document.getElementById('index').getAttribute('href'));
+  localStorage.setItem('switcher', indexSwitcher.classList.value);
+}); // Local storage
+
+var activeTheme = localStorage.getItem('theme');
+var switcherPosition = localStorage.getItem('switcher');
+
+if (activeTheme === null) {
+  document.getElementById('index').href = './css/index.css';
+  indexSwitcher.className.value = 'switch-btn';
+} else {
+  document.getElementById('index').href = activeTheme;
+  indexSwitcher.className.value = switcherPosition;
+}
+
+/***/ }),
 
 /***/ "./resources/scss/index.scss":
 /*!***********************************!*\
@@ -8,6 +46,7 @@
   \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
@@ -20,6 +59,7 @@ __webpack_require__.r(__webpack_exports__);
   \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
@@ -32,6 +72,7 @@ __webpack_require__.r(__webpack_exports__);
   \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
@@ -44,6 +85,7 @@ __webpack_require__.r(__webpack_exports__);
   \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
@@ -136,7 +178,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"/js/app": 0,
+/******/ 			"/js/index": 0,
 /******/ 			"css/about-dark": 0,
 /******/ 			"css/index-dark": 0,
 /******/ 			"css/about": 0,
@@ -190,6 +232,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	__webpack_require__.O(undefined, ["css/about-dark","css/index-dark","css/about","css/index"], () => (__webpack_require__("./resources/js/index.js")))
 /******/ 	__webpack_require__.O(undefined, ["css/about-dark","css/index-dark","css/about","css/index"], () => (__webpack_require__("./resources/scss/index.scss")))
 /******/ 	__webpack_require__.O(undefined, ["css/about-dark","css/index-dark","css/about","css/index"], () => (__webpack_require__("./resources/scss/about.scss")))
 /******/ 	__webpack_require__.O(undefined, ["css/about-dark","css/index-dark","css/about","css/index"], () => (__webpack_require__("./resources/scss/index-dark.scss")))

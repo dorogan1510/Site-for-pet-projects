@@ -77,10 +77,14 @@ h6 {
 
 // START
 
+$bg: #f3f3f3;
+$h1: #181717;
+$h2: #606060;
+
 body {
   max-width: 1440px;
   margin: auto;
-  background-color: #f3f3f3;
+  background-color: $bg;
 
   font-family: 'Raleway', 'Inter';
   font-size: 1rem;
@@ -100,7 +104,7 @@ body {
   &__link {
     margin-left: 30px;
 
-    color: black;
+    color: $h1;
 
     font-style: normal;
     font-weight: 500;
@@ -154,6 +158,8 @@ body {
     width: 575px;
     height: 359px;
     margin-bottom: 136px;
+
+    color: $h2;
 
     font-family: 'Raleway';
     font-style: normal;
@@ -224,7 +230,7 @@ body {
     display: block;
     margin-top: 30px;
 
-    color: black;
+    color: $h1;
 
     font-family: 'Inter';
     font-style: normal;
@@ -238,6 +244,8 @@ body {
     width: 338px;
     height: 37px;
 
+    color: $h1;
+
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
@@ -250,7 +258,7 @@ body {
     width: 1120px;
     height: 2px;
     margin-bottom: 71px;
-    background-color: #181717;
+    background-color: $h1;
   }
 }
 
@@ -277,7 +285,7 @@ body {
     font-size: 21px;
     line-height: 120%;
     letter-spacing: -0.03em;
-    color: black;
+    color: $h1;
 
     position: relative;
 
@@ -287,7 +295,7 @@ body {
       width: 100%;
       height: 2.5px;
       border-radius: 4px;
-      background-color: #18272f;
+      background-color: $h1;
       bottom: -5px;
       left: 0;
       transform-origin: right;
@@ -300,4 +308,39 @@ body {
       transform: scaleX(1);
     }
   }
+}
+
+// SWITCH-BTN
+
+.switch-btn {
+  display: inline-block;
+  width: 72px;
+  height: 38px;
+  border-radius: 19px;
+  background: $h2;
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition-duration: 300ms;
+}
+.switch-btn::after {
+  content: '';
+  height: 32px;
+  width: 32px;
+  border-radius: 17px;
+  background: $bg;
+  top: 3px;
+  left: 3px;
+  transition-duration: 300ms;
+  position: absolute;
+  z-index: 1;
+}
+.switch-on {
+  background: $h1;
+}
+.switch-on::after {
+  left: 37px;
 }

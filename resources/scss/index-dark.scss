@@ -80,9 +80,9 @@ html {
   scroll-behavior: smooth;
 }
 
-$bg: #f3f3f3;
-$h1: #181717;
-$h2: #606060;
+$bg: #2a2a2a;
+$h1: #e7e7e7;
+$h2: #e2e2e2;
 
 body {
   max-width: 1440px;
@@ -113,7 +113,7 @@ body {
     line-height: 120%;
     letter-spacing: -0.03em;
 
-    color: $h1;
+    color: $h2;
 
     position: relative;
 
@@ -123,7 +123,7 @@ body {
       width: 100%;
       height: 2.5px;
       border-radius: 4px;
-      background-color: #18272f;
+      background-color: $h1;
       bottom: -5px;
       left: 0;
       transform-origin: right;
@@ -140,6 +140,7 @@ body {
 
 .main {
   margin: 0 160px;
+  color: $h1;
 
   h1 {
     width: 672px;
@@ -225,6 +226,7 @@ body {
 
 .footer {
   margin: 167px 160px;
+  color: $h2;
 
   &__container {
     padding-bottom: 70px;
@@ -246,7 +248,7 @@ body {
     font-size: 21px;
     line-height: 120%;
     letter-spacing: -0.03em;
-    color: $h1;
+    color: $h2;
 
     position: relative;
 
@@ -256,7 +258,7 @@ body {
       width: 100%;
       height: 2.5px;
       border-radius: 4px;
-      background-color: #18272f;
+      background-color: $h2;
       bottom: -5px;
       left: 0;
       transform-origin: right;
@@ -286,21 +288,19 @@ body {
   cursor: pointer;
   position: relative;
   transition-duration: 300ms;
-
-  &::after {
-    content: '';
-    height: 32px;
-    width: 32px;
-    border-radius: 17px;
-    background: $bg;
-    top: 3px;
-    left: 3px;
-    transition-duration: 300ms;
-    position: absolute;
-    z-index: 1;
-  }
 }
-
+.switch-btn::after {
+  content: '';
+  height: 32px;
+  width: 32px;
+  border-radius: 17px;
+  background: $bg;
+  top: 3px;
+  left: 3px;
+  transition-duration: 300ms;
+  position: absolute;
+  z-index: 1;
+}
 .switch-on {
   background: $h1;
 }

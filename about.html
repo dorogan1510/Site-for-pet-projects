@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/about.css" />
+    <link rel="stylesheet" href="./css/about.css" id="about" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Raleway:wght@400;500&display=swap"
       rel="stylesheet"
@@ -14,8 +14,11 @@
   <body>
     <header class="header">
       <nav class="nav">
-        <a class="nav__link" href="index.html">Projects</a>
-        <a class="nav__link" href="about.html">About</a>
+        <div class="switch-btn" id="about-switcher"></div>
+        <div>
+          <a class="nav__link" href="index.html">Projects</a>
+          <a class="nav__link" href="about.html">About</a>
+        </div>
       </nav>
     </header>
 
@@ -61,7 +64,10 @@
           I am thrilled to answer to your next project
         </div>
         <div class="prefooter__mail-resume">
-          <div class="prefooter__email">frolovdan94@gmail.com</div>
+          <a class="prefooter__email" href="mailto:frolovdan94@gmail.com"
+            >frolovdan94@gmail.com</a
+          >
+          <!-- <div class="prefooter__email">frolovdan94@gmail.com</div> -->
           <a class="prefooter__resume" href="#">View my resume</a>
         </div>
       </div>
@@ -80,4 +86,6 @@
       </div>
     </footer>
   </body>
+  <script src="./js/about.js"></script>
+  <script src="./js/app.js"></script>
 </html>
