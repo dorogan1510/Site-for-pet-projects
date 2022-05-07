@@ -23,11 +23,11 @@ indexSwitcher.onclick = function () {
 
 indexSwitcher.addEventListener('click', function () {
   indexSwitcher.classList.toggle('switch-on');
-  localStorage.setItem('theme', document.getElementById('index').getAttribute('href'));
+  localStorage.setItem('index-theme', document.getElementById('index').getAttribute('href'));
   localStorage.setItem('switcher', indexSwitcher.classList.value);
 }); // Local storage
 
-var activeTheme = localStorage.getItem('theme');
+var activeTheme = localStorage.getItem('index-theme');
 var switcherPosition = localStorage.getItem('switcher');
 
 if (activeTheme === null) {
@@ -35,8 +35,9 @@ if (activeTheme === null) {
   indexSwitcher.className.value = 'switch-btn';
 } else {
   document.getElementById('index').href = activeTheme;
-  indexSwitcher.className.value = switcherPosition;
-}
+  indexSwitcher.className = switcherPosition;
+} // localStorage.removeItem('index-theme')
+// localStorage.removeItem('switcher')
 
 /***/ }),
 
