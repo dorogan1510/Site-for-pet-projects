@@ -16,14 +16,14 @@ indexSwitcher.onclick = () => {
 indexSwitcher.addEventListener('click', function () {
   indexSwitcher.classList.toggle('switch-on')
   localStorage.setItem(
-    'theme',
+    'index-theme',
     document.getElementById('index').getAttribute('href')
   )
   localStorage.setItem('switcher', indexSwitcher.classList.value)
 })
 
 // Local storage
-let activeTheme = localStorage.getItem('theme')
+let activeTheme = localStorage.getItem('index-theme')
 let switcherPosition = localStorage.getItem('switcher')
 
 if (activeTheme === null) {
@@ -31,5 +31,8 @@ if (activeTheme === null) {
   indexSwitcher.className.value = 'switch-btn'
 } else {
   document.getElementById('index').href = activeTheme
-  indexSwitcher.className.value = switcherPosition
+  indexSwitcher.className = switcherPosition
 }
+
+// localStorage.removeItem('index-theme')
+// localStorage.removeItem('switcher')
