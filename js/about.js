@@ -32,7 +32,6 @@ if (activeTheme === null) {
 } else {
   document.getElementById('about').href = activeTheme;
   aboutSwitcher.className = switcherPosition;
-} // localStorage.removeItem('about-theme')
-// localStorage.removeItem('switcher')
+}
 /******/ })()
 ;

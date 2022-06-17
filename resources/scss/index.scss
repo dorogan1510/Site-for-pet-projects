@@ -1,67 +1,67 @@
 /*Обнуление*/
 * {
-  padding: 0;
-  margin: 0;
-  border: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
 }
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 :focus,
 :active {
-  outline: none;
+    outline: none;
 }
 a:focus,
 a:active {
-  outline: none;
+    outline: none;
 }
 
 nav,
 footer,
 header,
 aside {
-  display: block;
+    display: block;
 }
 
 html,
 body {
-  height: 100%;
-  width: 100%;
-  font-size: 100%;
-  line-height: 1;
-  font-size: 14px;
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
 }
 
 input,
 button,
 textarea {
-  font-family: inherit;
+    font-family: inherit;
 }
 
 input::-ms-clear {
-  display: none;
+    display: none;
 }
 button {
-  cursor: pointer;
+    cursor: pointer;
 }
 button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
+    padding: 0;
+    border: 0;
 }
 a,
 a:visited {
-  text-decoration: none;
+    text-decoration: none;
 }
 a:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 ul li {
-  list-style: none;
+    list-style: none;
 }
 img {
-  vertical-align: top;
+    vertical-align: top;
 }
 
 h1,
@@ -70,14 +70,14 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: inherit;
-  font-weight: 400;
+    font-size: inherit;
+    font-weight: 400;
 }
 /*--------------------*/
 
 // START
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 $bg: #f3f3f3;
@@ -85,225 +85,233 @@ $h1: #181717;
 $h2: #606060;
 
 body {
-  max-width: 1440px;
-  margin: auto;
-  background-color: $bg;
+    max-width: 1440px;
+    margin: auto;
+    background-color: $bg;
 
-  font-family: 'Raleway', 'Inter';
-  font-size: 1rem;
-  line-height: 1.6;
+    font-family: 'Raleway', 'Inter';
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 .header {
-  margin: 0 160px;
+    margin: 0 160px;
 }
 
 .nav {
-  display: flex;
-  justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
 
-  padding-top: 70px;
-  margin-bottom: 150px;
+    padding-top: 70px;
+    margin-bottom: 150px;
 
-  &__link {
-    margin-left: 30px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 21px;
-    line-height: 120%;
-    letter-spacing: -0.03em;
+    &__link {
+        margin-left: 30px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 120%;
+        letter-spacing: -0.03em;
 
-    color: $h1;
+        color: $h1;
 
-    position: relative;
+        position: relative;
 
-    &:before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 2.5px;
-      border-radius: 4px;
-      background-color: #18272f;
-      bottom: -5px;
-      left: 0;
-      transform-origin: right;
-      transform: scaleX(0);
-      transition: transform 0.3s ease-in-out;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2.5px;
+            border-radius: 4px;
+            background-color: #18272f;
+            bottom: -5px;
+            left: 0;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        &:hover::before {
+            transform-origin: left;
+            transform: scaleX(1);
+        }
     }
-
-    &:hover::before {
-      transform-origin: left;
-      transform: scaleX(1);
-    }
-  }
 }
 
 .main {
-  margin: 0 160px;
+    margin: 0 160px;
 
-  h1 {
-    width: 672px;
-    height: 125px;
+    h1 {
+        width: 672px;
+        height: 125px;
 
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 60px;
-    line-height: 97%;
-    letter-spacing: -0.03em;
-  }
-
-  &__arrow {
-    display: block;
-    cursor: pointer;
-    width: 35px;
-    height: 35px;
-    border-top: 5px solid $h1;
-    border-right: 5px solid $h1;
-    margin: 50px 0 193px;
-    transform: rotate(135deg);
-    position: relative;
-    left: 11px;
-
-    &:hover {
-      border-top: 5px solid rgb(105, 105, 105);
-      border-right: 5px solid rgb(105, 105, 105);
-
-      transition: border-top 0.2s linear, border-right 0.2s linear;
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 60px;
+        line-height: 97%;
+        letter-spacing: -0.03em;
     }
-  }
+
+    &__arrow {
+        display: block;
+        cursor: pointer;
+        width: 35px;
+        height: 35px;
+        border-top: 5px solid $h1;
+        border-right: 5px solid $h1;
+        margin: 50px 0 193px;
+        transform: rotate(135deg);
+        position: relative;
+        left: 11px;
+
+        &:hover {
+            border-top: 5px solid rgb(105, 105, 105);
+            border-right: 5px solid rgb(105, 105, 105);
+
+            transition: border-top 0.2s linear, border-right 0.2s linear;
+        }
+    }
 }
 
 .section {
-  font-family: 'Inter';
-  font-style: normal;
+    font-family: 'Inter';
+    font-style: normal;
 
-  width: 1120px;
-  height: 473px;
-  margin-bottom: 100px;
+    width: 1120px;
+    height: 473px;
+    margin-bottom: 100px;
 
-  &__flex {
-    display: flex;
-    justify-content: space-between;
-  }
+    &__flex {
+        display: flex;
+        justify-content: space-between;
 
-  h2 {
-    margin-bottom: 25px;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 121.5%;
-    letter-spacing: -0.03em;
-  }
+        a {
+            margin-right: 10px;
+        }
 
-  p {
-    width: 356px;
-    height: 169px;
-    margin-bottom: 134px;
+        img {
+            border-radius: 20px;
+        }
+    }
 
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 121.5%;
-    letter-spacing: -0.03em;
-  }
+    h2 {
+        margin-bottom: 25px;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 121.5%;
+        letter-spacing: -0.03em;
+    }
 
-  a {
-    color: $h1;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 121.5%;
-    letter-spacing: -0.03em;
-    text-decoration-line: underline;
-  }
+    p {
+        width: 356px;
+        height: 169px;
+        margin-bottom: 134px;
+
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 121.5%;
+        letter-spacing: -0.03em;
+    }
+
+    a {
+        color: $h1;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 121.5%;
+        letter-spacing: -0.03em;
+        text-decoration-line: underline;
+    }
 }
 
 .line {
-  width: 1120px;
-  height: 2px;
-  margin-top: 106px;
-  background-color: $h1;
+    width: 1120px;
+    height: 2px;
+    margin-top: 106px;
+    background-color: $h1;
 }
 
 .footer {
-  margin: 167px 160px;
+    margin: 167px 160px;
 
-  &__container {
-    padding-bottom: 70px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__name {
-    font-weight: 500;
-    font-size: 21px;
-    line-height: 120%;
-    letter-spacing: -0.03em;
-  }
-
-  a {
-    margin-left: 37px;
-
-    font-weight: 500;
-    font-size: 21px;
-    line-height: 120%;
-    letter-spacing: -0.03em;
-    color: $h1;
-
-    position: relative;
-
-    &:before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 2.5px;
-      border-radius: 4px;
-      background-color: #18272f;
-      bottom: -5px;
-      left: 0;
-      transform-origin: right;
-      transform: scaleX(0);
-      transition: transform 0.3s ease-in-out;
+    &__container {
+        padding-bottom: 70px;
+        display: flex;
+        justify-content: space-between;
     }
 
-    &:hover::before {
-      transform-origin: left;
-      transform: scaleX(1);
+    &__name {
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 120%;
+        letter-spacing: -0.03em;
     }
-  }
+
+    a {
+        margin-left: 37px;
+
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 120%;
+        letter-spacing: -0.03em;
+        color: $h1;
+
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2.5px;
+            border-radius: 4px;
+            background-color: #18272f;
+            bottom: -5px;
+            left: 0;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        &:hover::before {
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+    }
 }
 
 // SWITCH-BTN
 
 .switch-btn {
-  display: inline-block;
-  width: 72px;
-  height: 38px;
-  border-radius: 19px;
-  background: $h2;
-  z-index: 0;
-  margin: 0;
-  padding: 0;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  transition-duration: 300ms;
-
-  &::after {
-    content: '';
-    height: 32px;
-    width: 32px;
-    border-radius: 17px;
-    background: $bg;
-    top: 3px;
-    left: 3px;
+    display: inline-block;
+    width: 66px;
+    height: 28px;
+    border-radius: 19px;
+    background: $h2;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    position: relative;
     transition-duration: 300ms;
-    position: absolute;
-    z-index: 1;
-  }
+
+    &::after {
+        content: '';
+        height: 20px;
+        width: 26px;
+        border-radius: 17px;
+        background: $bg;
+        top: 4px;
+        left: 4px;
+        transition-duration: 300ms;
+        position: absolute;
+        z-index: 1;
+    }
 }
 
 .switch-on {
-  background: $h1;
+    background: $h1;
 }
 .switch-on::after {
-  left: 37px;
+    left: 37px;
 }

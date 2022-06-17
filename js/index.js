@@ -12,11 +12,17 @@ var indexSwitcher = document.getElementById('index-switcher');
 
 indexSwitcher.onclick = function () {
   var theme = document.getElementById('index');
+  var githubIconColor = document.getElementById('github_icon');
+  var externalIconColor = document.getElementById('external_icon');
 
   if (theme.getAttribute('href') == './css/index.css') {
     theme.href = './css/index-dark.css';
+    githubIconColor.src = './resources/img/GitHub_light.png';
+    externalIconColor.src = './resources/img/External_link_light.png';
   } else {
     theme.href = './css/index.css';
+    githubIconColor.src = './resources/img/GitHub_dark.png';
+    externalIconColor.src = './resources/img/External_link_dark.png';
   }
 }; // Change switcher position
 
@@ -36,8 +42,7 @@ if (activeTheme === null) {
 } else {
   document.getElementById('index').href = activeTheme;
   indexSwitcher.className = switcherPosition;
-} // localStorage.removeItem('index-theme')
-// localStorage.removeItem('switcher')
+}
 
 /***/ }),
 
