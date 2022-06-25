@@ -1,4 +1,4 @@
-/*Обнуление*/
+/*Reset CSS*/
 * {
     padding: 0;
     margin: 0;
@@ -91,15 +91,21 @@ body {
     line-height: 1.6;
 }
 
-.header {
+.page {
     margin: 0 160px;
 }
-
+.header {
+    margin-bottom: 150px;
+}
 .nav {
     display: flex;
     justify-content: flex-end;
     padding-top: 70px;
-    margin-bottom: 150px;
+
+    .hide-icon {
+        opacity: 0;
+        transition: opacity 0.3s linear;
+    }
 
     &__link {
         margin-left: 30px;
@@ -136,15 +142,17 @@ body {
 }
 
 .container1 {
-    margin: 0 160px;
-
     display: flex;
     justify-content: space-between;
+    margin-bottom: 60px;
 
+    &__left-side {
+        margin-right: 40px;
+    }
     h1 {
-        width: 544px;
-        height: 129px;
-        margin-bottom: 32px;
+        max-width: 600px;
+        height: auto;
+        margin-bottom: 30px;
 
         font-family: 'Raleway';
         font-style: normal;
@@ -155,9 +163,8 @@ body {
     }
 
     p {
-        width: 575px;
-        height: 359px;
-        margin-bottom: 136px;
+        max-width: 600px;
+        height: auto;
 
         color: $h2;
 
@@ -168,16 +175,20 @@ body {
         line-height: 117%;
         letter-spacing: -0.03em;
     }
+
+    img {
+        border-radius: 20px;
+        max-width: 432px;
+        max-height: 638px;
+    }
 }
 
 .container2 {
-    margin: 60px 160px 0;
-
     &__parts {
         display: flex;
         justify-content: flex-start;
 
-        margin-bottom: 72px;
+        margin-bottom: 60px;
 
         &__flex1 {
             width: 124px;
@@ -205,9 +216,9 @@ body {
 }
 
 .prefooter {
-    width: 1120px;
-    height: 166px;
-    margin: 0 160px 210px;
+    max-width: 1120px;
+    max-height: 166px;
+    margin-bottom: 150px;
 
     &__flex {
         display: flex;
@@ -216,7 +227,7 @@ body {
 
     &__text {
         width: 347px;
-        height: 71px;
+        max-height: 71px;
 
         font-family: 'Raleway';
         font-style: normal;
@@ -228,11 +239,11 @@ body {
 
     &__resume {
         display: block;
-        margin-top: 30px;
+        margin-top: 5px;
 
         color: $h1;
 
-        font-family: 'Inter';
+        font-family: 'Raleway';
         font-style: normal;
         font-weight: 400;
         font-size: 22px;
@@ -241,8 +252,8 @@ body {
     }
 
     &__email {
-        width: 338px;
-        height: 37px;
+        max-width: 338px;
+        max-height: 37px;
 
         color: $h1;
 
@@ -255,16 +266,17 @@ body {
     }
 
     &__line {
-        width: 1120px;
-        height: 2px;
+        max-width: 1120px;
+        max-height: 2px;
         margin-bottom: 71px;
         background-color: $h1;
     }
 }
 
 .footer {
-    margin: 167px 160px;
-
+    &__icon {
+        height: 0;
+    }
     &__container {
         padding-bottom: 70px;
         display: flex;
@@ -319,7 +331,7 @@ body {
     border-radius: 19px;
     background: $h2;
     z-index: 0;
-    margin: 0;
+    margin: 0 10px;
     padding: 0;
     border: none;
     cursor: pointer;
@@ -345,4 +357,167 @@ body {
 }
 .switch-on::after {
     left: 37px;
+}
+
+// Start of media queries
+@media (max-width: 1319px) {
+    .page {
+        margin: 0 80px;
+    }
+    .switcher {
+        display: none;
+    }
+
+    .footer {
+        &__container {
+            a {
+                font-size: 18px;
+            }
+        }
+
+        &__name {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer {
+        &__name {
+            margin-bottom: 10px;
+        }
+        &__icon {
+            height: 40px;
+        }
+        &__container {
+            flex-direction: column;
+            align-items: center;
+            a {
+                font-size: 0;
+                margin-left: 4px;
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .container1 {
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        img {
+            max-width: 292px;
+            max-height: 432px;
+        }
+
+        &__left-side {
+            margin-right: 0;
+        }
+    }
+
+    .container2 {
+        &__parts {
+            justify-content: center;
+        }
+    }
+
+    .prefooter {
+        &__flex {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__text {
+            margin-bottom: 20px;
+            text-align: center;
+            width: auto;
+        }
+
+        &__resume {
+            margin-top: 20px;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 812px) {
+    .header {
+        margin-bottom: 80px;
+    }
+    .container1 {
+        h1 {
+            font-size: 48px;
+        }
+        p {
+            font-size: 28px;
+        }
+    }
+
+    .container2 {
+        &__parts {
+            flex-direction: column;
+            align-items: center;
+
+            &__flex1 {
+                width: auto;
+                margin-right: 0;
+            }
+
+            &__flex2 {
+                width: auto;
+                height: auto;
+
+                text-align: center;
+            }
+        }
+    }
+
+    .prefooter {
+        margin-bottom: 80px;
+    }
+}
+
+@media (max-width: 538px) {
+    .nav {
+        &__link {
+            font-size: 18px;
+        }
+    }
+
+    .page {
+        margin: 0 20px;
+    }
+    .container1 {
+        h1 {
+            font-size: 40px;
+        }
+        p {
+            font-size: 22px;
+        }
+        img {
+            max-width: 219px;
+            max-height: 324px;
+        }
+    }
+
+    .prefooter {
+        &__text {
+            font-size: 22px;
+        }
+        &__email {
+            font-size: 26px;
+        }
+        &__resume {
+            font-size: 22px;
+        }
+    }
 }

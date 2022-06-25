@@ -1,5 +1,4 @@
-@charset "UTF-8";
-/*Обнуление*/
+/*Reset CSS*/
 * {
   padding: 0;
   margin: 0;
@@ -98,7 +97,7 @@ body {
   line-height: 1.6;
 }
 
-.header {
+.page {
   margin: 0 160px;
 }
 
@@ -107,6 +106,10 @@ body {
   justify-content: flex-end;
   padding-top: 70px;
   margin-bottom: 150px;
+}
+.nav .hide-icon {
+  opacity: 0;
+  transition: opacity 0.3s linear;
 }
 .nav__link {
   margin-left: 30px;
@@ -137,10 +140,10 @@ body {
 }
 
 .main {
-  margin: 0 160px;
+  margin-bottom: 160px;
 }
 .main h1 {
-  width: 672px;
+  max-width: 672px;
   height: 125px;
   font-family: "Raleway";
   font-style: normal;
@@ -170,9 +173,12 @@ body {
 .section {
   font-family: "Inter";
   font-style: normal;
-  width: 1120px;
-  height: 473px;
-  margin-bottom: 100px;
+  max-width: 1120px;
+  min-height: 473px;
+  margin-bottom: 80px;
+}
+.section .business-card-landing {
+  border: 1px solid #d4d4d4;
 }
 .section__flex {
   display: flex;
@@ -184,17 +190,38 @@ body {
 .section__flex img {
   border-radius: 20px;
 }
+.section__flex .left-side {
+  position: relative;
+}
+.section__flex .links {
+  position: absolute;
+  bottom: 0;
+}
+.section__flex .links .github-icon {
+  transition: 0.4s;
+}
+.section__flex .links .github-icon:hover, .section__flex .links .github-icon:focus {
+  background-color: rgba(110, 84, 148, 0.4);
+  box-shadow: 0 0 24px 0 #6e5494;
+}
+.section__flex .links .external-icon {
+  transition: 0.4s;
+}
+.section__flex .links .external-icon:hover, .section__flex .links .external-icon:focus {
+  background-color: rgba(132, 244, 254, 0.4);
+  box-shadow: 0 0 24px 0 #84f4fe;
+}
 .section h2 {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   font-weight: 500;
   font-size: 22px;
   line-height: 121.5%;
   letter-spacing: -0.03em;
 }
 .section p {
-  width: 356px;
-  height: 169px;
-  margin-bottom: 134px;
+  max-width: 356px;
+  height: auto;
+  margin-bottom: 25px;
   font-weight: 400;
   font-size: 18px;
   line-height: 121.5%;
@@ -209,17 +236,25 @@ body {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
 }
+.section ul {
+  list-style: inside;
+  margin-bottom: 20px;
+}
+.section ul li {
+  font-size: 16px;
+  line-height: 121.5%;
+  letter-spacing: -0.03em;
+  list-style: inherit;
+  margin-bottom: 10px;
+}
 
 .line {
-  width: 1120px;
+  max-width: 1120px;
   height: 2px;
   margin-top: 106px;
   background-color: #181717;
 }
 
-.footer {
-  margin: 167px 160px;
-}
 .footer__container {
   padding-bottom: 70px;
   display: flex;
@@ -257,6 +292,9 @@ body {
   transform-origin: left;
   transform: scaleX(1);
 }
+.footer__icon {
+  height: 0;
+}
 
 .switch-btn {
   display: inline-block;
@@ -265,7 +303,7 @@ body {
   border-radius: 19px;
   background: #606060;
   z-index: 0;
-  margin: 0;
+  margin: 0 10px;
   padding: 0;
   border: none;
   cursor: pointer;
@@ -291,4 +329,89 @@ body {
 
 .switch-on::after {
   left: 37px;
+}
+
+@media (max-width: 1319px) {
+  .switcher {
+    display: none;
+  }
+
+  .section__flex {
+    flex-direction: column;
+  }
+  .section__flex .left-side {
+    order: 2;
+    min-height: 380px;
+  }
+  .section img {
+    order: 1;
+    margin-bottom: 40px;
+    max-width: 640px;
+    max-height: 388px;
+  }
+
+  .line {
+    margin-top: 30px;
+  }
+
+  .footer__container a {
+    font-size: 18px;
+  }
+  .footer__name {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1024px) {
+  .footer__name {
+    margin-bottom: 10px;
+  }
+  .footer__icon {
+    height: 40px;
+  }
+  .footer__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__container a {
+    font-size: 0;
+    margin-left: 4px;
+  }
+  .footer__container a::before {
+    display: none;
+  }
+}
+@media (max-width: 812px) {
+  .main {
+    margin-bottom: 80px;
+  }
+
+  .nav {
+    margin-bottom: 80px;
+  }
+
+  .page {
+    margin: 0 80px;
+  }
+
+  .main h1 {
+    font-size: 48px;
+  }
+}
+@media (max-width: 538px) {
+  .nav__link {
+    font-size: 18px;
+  }
+
+  .main__arrow {
+    display: none;
+  }
+
+  .page {
+    margin: 0 20px;
+  }
+
+  .main h1 {
+    margin-bottom: 40px;
+    font-size: 40px;
+  }
 }

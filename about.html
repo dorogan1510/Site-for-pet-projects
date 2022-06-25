@@ -1,90 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/about.css" id="about" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Raleway:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <title>About me</title>
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/about.css" id="about" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Raleway:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <title>About me</title>
+    </head>
 
-  <body>
-    <header class="header">
-      <nav class="nav">
-        <div class="switch-btn" id="about-switcher"></div>
-        <div>
-          <a class="nav__link" href="index.html">Projects</a>
-          <a class="nav__link" href="about.html">About</a>
-        </div>
-      </nav>
-    </header>
+    <body>
+        <div class="page">
+            <header class="header">
+                <nav class="nav">
+                    <div class="switcher">
+                        <img
+                            id="sun"
+                            src="./resources/img/sun.svg"
+                            width="30px"
+                            height="30px"
+                        />
+                        <div class="switch-btn" id="about-switcher"></div>
+                        <img
+                            class="hide-icon"
+                            id="moon"
+                            src="./resources/img/moon.png"
+                            width="30px"
+                            height="30px"
+                        />
+                    </div>
+                    <div>
+                        <a class="nav__link" href="index.html">Projects</a>
+                        <a class="nav__link" href="about.html">About me</a>
+                    </div>
+                </nav>
+            </header>
 
-    <main>
-      <div class="container1">
-        <div>
-          <h1>Hi I’m Frolov Danila, fronted developer</h1>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-          </p>
-        </div>
-        <div>
-          <img src="./resources/img/Me.png" alt="Danila Frolov" />
-        </div>
-      </div>
+            <main>
+                <div class="container1">
+                    <div class="container1__left-side">
+                        <h1>Hi I’m Frolov Danila, fronted developer</h1>
+                        <p>
+                            I'm a perfectionist traveling the world and working
+                            in process. My favorite style is minimalism. I
+                            always take my work process seriously and
+                            professionally and I can guarantee that working with
+                            me, you will not be disappointed.
+                        </p>
+                    </div>
+                    <img src="./resources/img/Me.png" alt="Danila Frolov" />
+                </div>
 
-      <div class="container2">
-        <div class="container2__parts">
-          <div class="container2__parts__flex1">Programming language</div>
-          <div class="container2__parts__flex2">JavaScript</div>
-        </div>
-        <div class="container2__parts">
-          <div class="container2__parts__flex1">My stack</div>
-          <div class="container2__parts__flex2">
-            JS ES6+, HTML5, CSS3, SCSS, React, Git, Gulp, Laravel mix, Webpack
-          </div>
-        </div>
-        <div class="container2__parts">
-          <div class="container2__parts__flex1">Extra</div>
-          <div class="container2__parts__flex2">Adobe XD, Figma</div>
-        </div>
-      </div>
-    </main>
+                <div class="container2">
+                    <div class="container2__parts">
+                        <div class="container2__parts__flex1">
+                            Programming language
+                        </div>
+                        <div class="container2__parts__flex2">
+                            JavaScript(ES5, ES6+) Typescript
+                        </div>
+                    </div>
+                    <div class="container2__parts">
+                        <div class="container2__parts__flex1">My stack</div>
+                        <div class="container2__parts__flex2">
+                            React.js, HTML5, CSS3, SCSS/SASS, React transition
+                            group, CSS modules, Chart.js, Git, WebPack, Laravel
+                            mix, Gulp
+                        </div>
+                    </div>
+                    <div class="container2__parts">
+                        <div class="container2__parts__flex1">Extra</div>
+                        <div class="container2__parts__flex2">
+                            Figma, Adobe XD, Adobe Photoshop
+                        </div>
+                    </div>
+                </div>
+            </main>
 
-    <div class="prefooter">
-      <div class="prefooter__line"></div>
-      <div class="prefooter__flex">
-        <div class="prefooter__text">
-          I am thrilled to answer to your next project
-        </div>
-        <div class="prefooter__mail-resume">
-          <a class="prefooter__email" href="mailto:frolovdan94@gmail.com"
-            >frolovdan94@gmail.com</a
-          >
-          <a class="prefooter__resume" href="#">View my resume</a>
-        </div>
-      </div>
-    </div>
+            <div class="prefooter">
+                <div class="prefooter__line"></div>
+                <div class="prefooter__flex">
+                    <div class="prefooter__text">
+                        I am thrilled to answer to your next project
+                    </div>
+                    <div class="prefooter__mail-resume">
+                        <a
+                            class="prefooter__email"
+                            href="mailto:frolovdan94@gmail.com"
+                            >frolovdan94@gmail.com</a
+                        >
+                        <a class="prefooter__resume" href="#">View my resume</a>
+                    </div>
+                </div>
+            </div>
 
-    <footer class="footer">
-      <div class="footer__container">
-        <div class="footer__name">Danila Frolov — 2022</div>
-        <div>
-          <a href="#">Github</a>
-          <a href="#">WhatsApp</a>
-          <a href="#">Telegram</a>
-          <a href="#">LinkedIn</a>
-          <a href="#">Skype</a>
+            <footer class="footer">
+                <div class="footer__container">
+                    <div class="footer__name">Danila Frolov — 2022</div>
+                    <div>
+                        <a href="https://github.com/dorogan1510" target="_blank"
+                            >Github<img
+                                class="footer__icon"
+                                src="./resources/img/github.png"
+                        /></a>
+                        <a
+                            href="https://api.whatsapp.com/send?phone=79052127515"
+                            target="_blank"
+                            >WhatsApp<img
+                                class="footer__icon"
+                                src="./resources/img/whatsapp.svg"
+                        /></a>
+                        <a href="https://t.me/danfrolov15" target="_blank"
+                            >Telegram<img
+                                class="footer__icon"
+                                src="./resources/img/telegram.svg"
+                        /></a>
+                        <a href="#" target="_blank"
+                            >LinkedIn<img
+                                class="footer__icon"
+                                src="./resources/img/linkedin_dark.png"
+                        /></a>
+                        <a
+                            href="skype:live:.cid.ef8c780126cbcdc7?chat"
+                            target="_blank"
+                            >Skype<img
+                                class="footer__icon"
+                                src="./resources/img/skype.svg"
+                        /></a>
+                    </div>
+                </div>
+            </footer>
         </div>
-      </div>
-    </footer>
-  </body>
-  <script src="./js/about.js"></script>
+    </body>
+    <script src="./js/about.js"></script>
 </html>

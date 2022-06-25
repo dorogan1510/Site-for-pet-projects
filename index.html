@@ -9,114 +9,244 @@
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Raleway:wght@400;500&display=swap"
             rel="stylesheet"
         />
-        <title>My pet projects</title>
+        <title>My projects</title>
     </head>
 
     <body>
-        <header class="header">
-            <nav class="nav">
-                <div class="switch-btn" id="index-switcher"></div>
-                <div>
-                    <a class="nav__link" href="index.html">Projects</a>
-                    <a class="nav__link" href="about.html">About</a>
-                </div>
-            </nav>
-        </header>
-
-        <main class="main">
-            <h1>I’m glad to present you my pet projects</h1>
-            <a class="main__arrow" href="#id1"></a>
-
-            <section class="section">
-                <div class="section__flex" id="id1">
-                    <div>
-                        <h2>01 / Weather app</h2>
-                        <p>
-                            Check the weather anywhere in the world and also
-                            enjoy the background of the place you entered
-                        </p>
-                        <a
-                            href="https://github.com/dorogan1510/weather"
-                            target="_blank"
-                            ><img
-                                id="github_icon"
-                                src="./resources/img/GitHub_dark.png"
-                                width="30px"
-                                height="30px"
-                        /></a>
-                        <a
-                            href="./resources/Projects/weather/index.html"
-                            target="_blank"
-                            ><img
-                                id="external_icon"
-                                src="./resources/img/External_link_dark.png"
-                                width="34px"
-                                height="34px"
-                        /></a>
+        <div class="page">
+            <header class="header">
+                <nav class="nav">
+                    <div class="switcher">
+                        <img
+                            id="sun"
+                            src="./resources/img/sun.svg"
+                            width="30px"
+                            height="30px"
+                        />
+                        <div class="switch-btn" id="index-switcher"></div>
+                        <img
+                            class="hide-icon"
+                            id="moon"
+                            src="./resources/img/moon.png"
+                            width="30px"
+                            height="30px"
+                        />
                     </div>
                     <div>
+                        <a class="nav__link" href="index.html">Projects</a>
+                        <a class="nav__link" href="about.html">About me</a>
+                    </div>
+                </nav>
+            </header>
+
+            <main class="main">
+                <h1>I’m glad to present you my projects</h1>
+                <a class="main__arrow" href="#id1"></a>
+
+                <section class="section">
+                    <div class="section__flex" id="id1">
+                        <div class="left-side">
+                            <h2>01 / Weather widget</h2>
+                            <p>
+                                Check the weather anywhere in the world and also
+                                enjoy the background of the place you entered
+                            </p>
+                            <ul>
+                                <li>JS ES6+</li>
+                                <li>SASS</li>
+                                <li>Fetch API</li>
+                                <li>Laravel Mix</li>
+                            </ul>
+                            <div class="links">
+                                <a
+                                    href="https://github.com/dorogan1510/weather"
+                                    target="_blank"
+                                    ><img
+                                        class="github-icon"
+                                        src="./resources/img/GitHub_dark.png"
+                                        width="30px"
+                                        height="30px"
+                                /></a>
+                                <a
+                                    href="./resources/Projects/weather/index.html"
+                                    target="_blank"
+                                    ><img
+                                        class="external-icon"
+                                        src="./resources/img/External_link_dark.png"
+                                        width="34px"
+                                        height="34px"
+                                /></a>
+                            </div>
+                        </div>
                         <img
                             src="./resources/img/weather_scrin.jpg"
                             alt="thumbnail"
-                            width="640"
-                            height="388"
                         />
                     </div>
-                </div>
-                <div class="line"></div>
-            </section>
+                    <div class="line"></div>
+                </section>
 
-            <section class="section">
-                <div class="section__flex">
-                    <div>
-                        <h2>02 / Project name</h2>
-                        <p>Description</p>
-                        <a href="#">Link</a>
+                <section class="section">
+                    <div class="section__flex">
+                        <div class="left-side">
+                            <h2>02 / Expense Tracker</h2>
+                            <p>You can stay on top of your daily expenses</p>
+                            <ul>
+                                <li>JS ES6+</li>
+                                <li>React.js</li>
+                                <li>Typescript</li>
+                                <li>Chart.js</li>
+                            </ul>
+                            <div class="links">
+                                <a
+                                    href="https://github.com/dorogan1510/web_card"
+                                    target="_blank"
+                                    ><img
+                                        class="github-icon"
+                                        src="./resources/img/GitHub_dark.png"
+                                        width="30px"
+                                        height="30px"
+                                /></a>
+                                <a
+                                    href="https://easyenglishyou.ru/morkoovochka"
+                                    target="_blank"
+                                    ><img
+                                        class="external-icon"
+                                        src="./resources/img/External_link_dark.png"
+                                        width="34px"
+                                        height="34px"
+                                /></a>
+                            </div>
+                        </div>
+                        <img src="./resources/img/dark.png" alt="thumbnail" />
                     </div>
-                    <div>
+                    <div class="line"></div>
+                </section>
+
+                <section class="section">
+                    <div class="section__flex">
+                        <div class="left-side">
+                            <h2>03 / Todo List</h2>
+                            <p>You can stay on top of your daily expenses</p>
+                            <ul>
+                                <li>JS ES6+</li>
+                                <li>React.js</li>
+                                <li>Typescript</li>
+                                <li>React transition group</li>
+                                <li>Local storage</li>
+                            </ul>
+                            <div class="links">
+                                <a
+                                    href="https://github.com/dorogan1510/React_todoList"
+                                    target="_blank"
+                                    ><img
+                                        class="github-icon"
+                                        src="./resources/img/GitHub_dark.png"
+                                        width="30px"
+                                        height="30px"
+                                /></a>
+                                <a
+                                    href="https://gorgeous-quokka-121d0f.netlify.app/"
+                                    target="_blank"
+                                    ><img
+                                        class="external-icon"
+                                        src="./resources/img/External_link_dark.png"
+                                        width="34px"
+                                        height="34px"
+                                /></a>
+                            </div>
+                        </div>
                         <img
-                            src="./resources/img/light.png"
+                            src="./resources/img/todo_scrin.jpg"
                             alt="thumbnail"
-                            width="640"
-                            height="365"
                         />
                     </div>
-                </div>
-                <div class="line"></div>
-            </section>
+                    <div class="line"></div>
+                </section>
 
-            <section class="section">
-                <div class="section__flex">
-                    <div>
-                        <h2>03 / Project name</h2>
-                        <p>Description</p>
-                        <a href="#">Link</a>
-                    </div>
-                    <div>
+                <section class="section">
+                    <div class="section__flex">
+                        <div class="left-side">
+                            <h2>04 / Business card landing</h2>
+                            <p>
+                                Real landing for language teacher. Nice css
+                                animations, adaptive layout, all information
+                                inside one page.
+                            </p>
+                            <ul>
+                                <li>JS ES6+</li>
+                                <li>SASS</li>
+                                <li>CSS animations</li>
+                                <li>Laravel Mix</li>
+                            </ul>
+                            <div class="links">
+                                <a
+                                    href="https://github.com/dorogan1510/web_card"
+                                    target="_blank"
+                                    ><img
+                                        class="github-icon"
+                                        src="./resources/img/GitHub_dark.png"
+                                        width="30px"
+                                        height="30px"
+                                /></a>
+                                <a
+                                    href="https://easyenglishyou.ru/morkoovochka"
+                                    target="_blank"
+                                    ><img
+                                        class="external-icon"
+                                        src="./resources/img/External_link_dark.png"
+                                        width="34px"
+                                        height="34px"
+                                /></a>
+                            </div>
+                        </div>
                         <img
-                            src="./resources/img/light.png"
+                            class="business-card-landing"
+                            src="./resources/img/Business_card_scrin.jpg"
                             alt="thumbnail"
-                            width="640"
-                            height="365"
                         />
                     </div>
-                </div>
-                <div class="line"></div>
-            </section>
-        </main>
+                    <div class="line"></div>
+                </section>
+            </main>
 
-        <footer class="footer">
-            <div class="footer__container">
-                <div class="footer__name">Danila Frolov — 2022</div>
-                <div>
-                    <a href="#">Github</a>
-                    <a href="#">WhatsApp</a>
-                    <a href="#">Telegram</a>
-                    <a href="#">LinkedIn</a>
-                    <a href="#">Skype</a>
+            <footer class="footer">
+                <div class="footer__container">
+                    <div class="footer__name">Danila Frolov — 2022</div>
+                    <div>
+                        <a href="https://github.com/dorogan1510" target="_blank"
+                            >Github<img
+                                class="footer__icon"
+                                src="./resources/img/github.png"
+                        /></a>
+                        <a
+                            href="https://api.whatsapp.com/send?phone=79052127515"
+                            target="_blank"
+                            >WhatsApp<img
+                                class="footer__icon"
+                                src="./resources/img/whatsapp.svg"
+                        /></a>
+                        <a href="https://t.me/danfrolov15" target="_blank"
+                            >Telegram<img
+                                class="footer__icon"
+                                src="./resources/img/telegram.svg"
+                        /></a>
+                        <a href="#" target="_blank"
+                            >LinkedIn<img
+                                class="footer__icon"
+                                src="./resources/img/linkedin_dark.png"
+                        /></a>
+                        <a
+                            href="skype:live:.cid.ef8c780126cbcdc7?chat"
+                            target="_blank"
+                            >Skype<img
+                                class="footer__icon"
+                                src="./resources/img/skype.svg"
+                        /></a>
+                    </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
+        </div>
     </body>
     <script src="./js/index.js"></script>
 </html>

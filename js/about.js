@@ -8,11 +8,17 @@ var aboutSwitcher = document.getElementById('about-switcher');
 
 aboutSwitcher.onclick = function () {
   var theme = document.getElementById('about');
+  var sun = document.getElementById('sun');
+  var moon = document.getElementById('moon');
 
   if (theme.getAttribute('href') == './css/about.css') {
     theme.href = './css/about-dark.css';
+    sun.classList.toggle('hide-icon');
+    moon.classList.toggle('hide-icon');
   } else {
     theme.href = './css/about.css';
+    sun.classList.toggle('hide-icon');
+    moon.classList.toggle('hide-icon');
   }
 }; // Change switcher position
 

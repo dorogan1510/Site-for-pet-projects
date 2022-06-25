@@ -12,17 +12,32 @@ var indexSwitcher = document.getElementById('index-switcher');
 
 indexSwitcher.onclick = function () {
   var theme = document.getElementById('index');
-  var githubIconColor = document.getElementById('github_icon');
-  var externalIconColor = document.getElementById('external_icon');
+  var githubIconColor = document.querySelectorAll('.github-icon');
+  var externalIconColor = document.querySelectorAll('.external-icon');
+  var sun = document.getElementById('sun');
+  var moon = document.getElementById('moon');
 
   if (theme.getAttribute('href') == './css/index.css') {
     theme.href = './css/index-dark.css';
-    githubIconColor.src = './resources/img/GitHub_light.png';
-    externalIconColor.src = './resources/img/External_link_light.png';
+    githubIconColor.forEach(function (item) {
+      return item.src = './resources/img/GitHub_light.png';
+    });
+    externalIconColor.forEach(function (item) {
+      return item.src = './resources/img/External_link_light.png';
+    });
+    sun.classList.toggle('hide-icon');
+    moon.classList.toggle('hide-icon');
   } else {
     theme.href = './css/index.css';
-    githubIconColor.src = './resources/img/GitHub_dark.png';
-    externalIconColor.src = './resources/img/External_link_dark.png';
+    githubIconColor.forEach(function (item) {
+      return item.src = './resources/img/GitHub_dark.png';
+    });
+    externalIconColor.forEach(function (item) {
+      return item.src = './resources/img/External_link_dark.png';
+    });
+    sun.classList.toggle('hide-icon');
+    moon.classList.toggle('hide-icon'); // sun.classList.revome('show-icon').add('hide-icon')
+    // moon.classList.remove('hide-icon').add('show-icon')
   }
 }; // Change switcher position
 

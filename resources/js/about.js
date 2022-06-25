@@ -3,11 +3,17 @@ let aboutSwitcher = document.getElementById('about-switcher')
 
 aboutSwitcher.onclick = () => {
     let theme = document.getElementById('about')
+    const sun = document.getElementById('sun')
+    const moon = document.getElementById('moon')
 
     if (theme.getAttribute('href') == './css/about.css') {
         theme.href = './css/about-dark.css'
+        sun.classList.toggle('hide-icon')
+        moon.classList.toggle('hide-icon')
     } else {
         theme.href = './css/about.css'
+        sun.classList.toggle('hide-icon')
+        moon.classList.toggle('hide-icon')
     }
 }
 
