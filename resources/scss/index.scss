@@ -374,8 +374,8 @@ body {
 
 // Start of media queries
 @media (max-width: 1319px) {
-    .switcher {
-        display: none;
+    .page {
+        margin: 0 80px;
     }
     .section {
         &__flex {
@@ -443,9 +443,6 @@ body {
     .nav {
         margin-bottom: 80px;
     }
-    .page {
-        margin: 0 80px;
-    }
 
     .main {
         h1 {
@@ -454,8 +451,14 @@ body {
     }
 }
 
-@media (max-width: 538px) {
+@media (max-width: 550px) {
+    .switcher {
+        margin-bottom: 20px;
+    }
     .nav {
+        flex-direction: column;
+        align-items: center;
+
         &__link {
             font-size: 18px;
         }

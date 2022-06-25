@@ -364,9 +364,6 @@ body {
     .page {
         margin: 0 80px;
     }
-    .switcher {
-        display: none;
-    }
 
     .footer {
         &__container {
@@ -450,13 +447,24 @@ body {
 }
 
 @media (max-width: 812px) {
+    .switcher {
+        margin-bottom: 20px;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .header {
         margin-bottom: 80px;
     }
+
     .container1 {
         h1 {
             font-size: 48px;
         }
+
         p {
             font-size: 28px;
         }
@@ -486,7 +494,7 @@ body {
     }
 }
 
-@media (max-width: 538px) {
+@media (max-width: 550px) {
     .nav {
         &__link {
             font-size: 18px;

@@ -329,10 +329,6 @@ body {
     margin: 0 80px;
   }
 
-  .switcher {
-    display: none;
-  }
-
   .footer__container a {
     font-size: 18px;
   }
@@ -397,6 +393,15 @@ body {
   }
 }
 @media (max-width: 812px) {
+  .switcher {
+    margin-bottom: 20px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .header {
     margin-bottom: 80px;
   }
@@ -426,7 +431,7 @@ body {
     margin-bottom: 80px;
   }
 }
-@media (max-width: 538px) {
+@media (max-width: 550px) {
   .nav__link {
     font-size: 18px;
   }
