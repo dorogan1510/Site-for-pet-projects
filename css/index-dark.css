@@ -112,7 +112,6 @@ body {
   transition: opacity 0.3s linear;
 }
 .nav__link {
-  margin-left: 30px;
   font-style: normal;
   font-weight: 500;
   font-size: 21px;
@@ -120,6 +119,9 @@ body {
   letter-spacing: -0.03em;
   color: #181717;
   position: relative;
+}
+.nav__link:last-child {
+  margin-left: 30px;
 }
 .nav__link:before {
   content: "";
@@ -459,6 +461,9 @@ body {
 .section__flex .external-icon:hover, .section__flex .external-icon:focus {
   background-color: rgba(132, 244, 254, 0.4);
   box-shadow: 0 0 24px 0 #84f4fe;
+}
+.section a {
+  color: white;
 }
 
 a {
